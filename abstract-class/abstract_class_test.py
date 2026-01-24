@@ -31,6 +31,28 @@ class Dog(Animal):
     
 
 
-dog = Dog()
+class Cat(Animal):
 
-print(dog.sound())
+    def sound(self):
+        return "Meow"
+
+    def movement(self):
+
+        return "stealth"
+        
+
+
+if __name__ == "__main__":
+
+    dog = Dog()
+
+    print(dog.sound())
+    #print(dog.movement())
+
+    cat = Cat()
+
+    print(cat.sound())
+    print(cat.movement())
+
+
+
