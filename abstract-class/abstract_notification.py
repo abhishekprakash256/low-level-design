@@ -1,12 +1,16 @@
 """
 Docstring for abstract-class.abstract_notification
 designing a notification system with abstract class
+the state is not in the correct place in Notification
 """
 
 
 from abc import ABC, abstractmethod
 
 class Notification(ABC):
+    """
+    The recipients state should not be there 
+    """
 
     def __init__(self):
 
