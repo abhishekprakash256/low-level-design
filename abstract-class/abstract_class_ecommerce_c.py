@@ -40,7 +40,7 @@ class OrderProcessor(ABC):
 
     def generate_invoice(self):
 
-        pass
+        return "Printing Invoice"
 
 
     def process_order(self):
@@ -64,6 +64,67 @@ class OrderProcessor(ABC):
 
 
 
+
+
+
+class DigitalOrder(OrderProcessor):
+    """
+    Docstring for DigitalOrder
+    The DigitalOrder class for payment of digital goods
+    """
+
+    def shipping_order(self):
+
+        shipping_amount = 0
+
+        self.amount = shipping_amount + self.amount
+ 
+
+    def apply_discount(self):
+
+        self.amount = self.amount * 0.9
+
+
+
+class PhysicalOrder(OrderProcessor):
+
+    def shipping_order(self):
+
+        shipping_cost = 50
+
+        #check the address
+        self.address_validation()
+
+        self.amount = shipping_cost + self.amount
+
+
+    def address_validation(self):
+
+        pass
+
+
+
+class InternationalOrder(PhysicalOrder):
+
+    def shipping_order(self):
+
+        custom_duty = 10
+
+        international_tax = 30
+
+        self.amount = custom_duty + international_tax + self.amount
+
+
+
+
+
+if __name__ == "main":
+
+    #digital_order 
+    digital_order = DigitalOrder()
+
+    print(digital_order.shipping_order())
+        
 
 
 
