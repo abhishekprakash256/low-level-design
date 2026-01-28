@@ -14,5 +14,32 @@ Client code that depends only on the interface
 
 
 
+--------------------------------------------
+
+make a paymnet class with base payment method
+
+PaymentMethod()
+method pay
+
+
+abstract class -- 
+
+BasePaymnet()
+def validate()
+
+def log()
+
+
+CreditCardPayment(BasePayment)
+
+
+has both method
+
+
 """
+
+
+
+
+from abc import ABC, abstractmethod
 
