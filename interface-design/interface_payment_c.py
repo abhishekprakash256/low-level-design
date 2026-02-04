@@ -74,13 +74,7 @@ class BasePayment(PaymentMethod):
 
 		if amount < 0 :
 
-			print("The paymnet failed")
-
-			return False
-
-		print("The paymnet went through")
-
-		#return True
+			raise ValueError("Payment failed: invalid amount")
 
 
 	def log_payment(self,amount : float):
@@ -93,7 +87,8 @@ class BasePayment(PaymentMethod):
 
 	def succesfull_payment(self , amount):
 		"""
-		The succesfull payment method done
+		The succesfull payment method 
+		Template-style method
 		"""
 
 		self.validate_pay(amount) 
@@ -119,15 +114,7 @@ class CreditCardPayment(BasePayment):
 		print(f"The paymnet has been done by card for {amount}")
 
 
-	def succesfull_payment(self , amount):
-		"""
-		The method payment has been succesfull 
-		"""
-		self.validate_pay(amount) 
 
-		self.log_payment(amount)
-
-		self.pay(amount)
 
 
 if __name__ == "__main__":
