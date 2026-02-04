@@ -44,7 +44,7 @@ class BaseNotification(ABC):
 #the abstract class
 class NotificationSystem():
 
-	def validation(self, recipient , message) :
+	def validate(self, recipient , message) :
 		"""
 		Validate the payment
 		"""
@@ -77,7 +77,7 @@ class NotificationSystem():
 
 		self.validate(recipient, message)
 		self.send(recipient, message)
-		self.log(recipient)
+		self.logging(recipient)
 
 
 
