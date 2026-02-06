@@ -42,7 +42,7 @@ class BaseNotification(ABC):
 
 
 #the abstract class
-class NotificationSystem():
+class NotificationSystem(BaseNotification):
 
 	def validate(self, recipient , message) :
 		"""
@@ -135,6 +135,6 @@ if __name__ == "__main__" :
 	
 	pushnotification = PushNotification()
 
-	print(smsnotification.send("Anny","Hello"))
+	print(pushnotification.send("Anny","Hello"))
 
 	
