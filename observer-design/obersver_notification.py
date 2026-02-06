@@ -73,7 +73,7 @@ class Subject(ABC):
 
 
 	@abstractmethod
-	def detach(self, observer : observer):
+	def detach(self, observer : Observer):
 
 		pass
 
@@ -120,3 +120,18 @@ class NewsPublisher(Subject):
 
 
 
+if __name__ == "__main__":
+
+    publisher = NewsPublisher()
+
+    email = EmailSubscriber()
+    sms = SMSSubscriber()
+    app = PUSHSubscriber()
+
+    # observers subscribe
+    publisher.attach(email)
+    publisher.attach(sms)
+    publisher.attach(app)
+
+    # publish news
+    publisher.publish_news("Observer Pattern Explained!")
