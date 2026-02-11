@@ -135,4 +135,3 @@ if __name__ == "__main__":
     weather_station.add_observer(phone_app)
 
     weather_station.notify_observer("SUNNY")
-
