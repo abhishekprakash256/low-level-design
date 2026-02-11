@@ -62,6 +62,32 @@ class Subject(ABC):
 
 
 
+#make the concrete class for weather
+class Weather(Subject):
+    """
+    The weather concrete class
+    """
+
+    def __init__(self):
+        self.observers = []
+        self.weather = ""
+
+    def add_observer(self, observer : Observer):
+        """
+        The function to add the observer
+        """
+
+        self.observers.append(observer)
+
+
+    def remove_observer(self, observer : Observer):
+        """
+        The function to remove the obsever
+        """
+
+        self.observers.remove(observer)
+
+        
         
  
 
