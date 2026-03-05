@@ -1,0 +1,5 @@
+"""
+The basic factory design 
+
+"""
+
