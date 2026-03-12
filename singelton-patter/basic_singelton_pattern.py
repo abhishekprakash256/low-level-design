@@ -7,7 +7,7 @@ class SingeltonClass():
 
 	def test_func(self, word) :
 
-		print(f"This is the {word}")
+		return f"This is the {word}"
 
 
 
