@@ -38,3 +38,24 @@ def SingletonDecorator(cls):
         return instances[cls]
 
     return get_instance
+
+
+
+import threading
+
+class SingletonThreading:
+    """
+    The singleton pattern using the thread safe
+    """
+
+    _instance = None
+    _lock = threading.Lock()
+
+    def __new__(cls):
+
+        with cls._lock:
+
+            if cls._instance is None:
+                cls._instance = super().__new__(cls)
+
+        return cls._instance
