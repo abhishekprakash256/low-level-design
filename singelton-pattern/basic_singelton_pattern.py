@@ -4,6 +4,9 @@ makding the basic singleton pattern
 
 
 class SingeltonClass():
+	"""
+	This is a wrong example as creation of the class has to ignore the second object
+	"""
 
 	def test_func(self, word) :
 
