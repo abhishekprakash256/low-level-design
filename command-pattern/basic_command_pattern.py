@@ -144,4 +144,30 @@ if __name__ == "__main__" :
 
     stereo = Stereo()
 
+    #create command
+    turn_on_tv = TurnOnCommand(tv)
+    turn_off_tv = TurnOffCommand(tv)
+    adjust_volume = AdjustVolumeCommand(stereo)
+    change_channel = ChangeChannel(tv)
+
+
+    #make the invoker 
+    remote = RemoteControl()
+
+
+    # Execute commands
+    remote.set_command(turn_on_tv)
+    remote.press_button()
+
+    remote.set_command(adjust_volume)
+    remote.press_button()
+
+    remote.set_command(change_channel)
+    remote.press_button()
+
+    remote.set_command(turn_off_tv)
+    remote.press_button()
+
+
+
     
